@@ -8,7 +8,7 @@ export default function Home() {
     <div>
       <h1>HELLO WORD</h1>
       <App />
-      </div>
-      
+    </div>
+
   );
 }

@@ -1,6 +1,10 @@
-export default function Card(props){
-    return(
-        <div>
+import React from 'react';
+import styles from './styles.module.css';
+
+
+export default function Card(props) {
+    return (
+        <div className={styles.card}>
             <div>
                 <h3>{props.titulo}</h3>
                 <p>{props.descricao}</p>
