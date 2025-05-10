@@ -1,17 +1,16 @@
 'use client';
 import React, { useState } from 'react';
 import styles from './styles.module.css';
-import { calcularPorcentagem } from './logica';
 
 export default function Card(props) {
-    const [valorVenda, setValorVenda] = useState('');
-    const [valorCusto, setValorCusto] = useState('');
+    const [valor1, setValor1] = useState('');
+    const [valor2, setValor2] = useState('');
     const [resultado, setResultado] = useState(null);
 
     const handleSubmit = (e) => {
         e.preventDefault();
         try {
-            const valorFinal = calcularPorcentagem(parseFloat(valorVenda), parseFloat(valorCusto));
+            const valorFinal = props.calcularFuncao(parseFloat(valor1), parseFloat(valor2));
             setResultado(valorFinal.toFixed(2));
         } catch (error) {
             alert(error.message);
@@ -26,29 +25,29 @@ export default function Card(props) {
             </div>
             <div>
                 <form onSubmit={handleSubmit}>
-                    <label htmlFor="valorVenda">{props.label_01}</label>
+                    <label htmlFor="valor1">{props.label_01}</label>
                     <input
-                        id="valorVenda"
+                        id="valor1"
                         type="number"
-                        value={valorVenda}
-                        onChange={(e) => setValorVenda(e.target.value)}
-                        placeholder="Digite o valor de venda"
+                        value={valor1}
+                        onChange={(e) => setValor1(e.target.value)}
+                        placeholder={props.placeholder_01}
                     />
 
-                    <label htmlFor="valorCusto">{props.label_02}</label>
+                    <label htmlFor="valor2">{props.label_02}</label>
                     <input
-                        id="valorCusto"
+                        id="valor2"
                         type="number"
-                        value={valorCusto}
-                        onChange={(e) => setValorCusto(e.target.value)}
-                        placeholder="Digite a porcentagem"
+                        value={valor2}
+                        onChange={(e) => setValor2(e.target.value)}
+                        placeholder={props.placeholder_02}
                     />
 
                     <button type="submit">{props.label_03}</button>
                 </form>
                 {resultado !== null && (
                     <div>
-                        <h4>Resultado: R$ {resultado}</h4>
+                        <h4>Resultado: {resultado}</h4>
                     </div>
                 )}
             </div>
