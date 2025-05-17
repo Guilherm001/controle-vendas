@@ -12,7 +12,17 @@ export default function RootLayout({ children }) {
   return (
     <html lang="pt-br">
       <body>
-        {children}
+        <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
+          <h1>barra superior</h1>
+          {/* barra superior */}
+          <div style={{ display: 'flex', flex: 1 }}>
+            <h1>barra lateral</h1>
+            {/* barra lateral */}
+            <main style={{ flex: 1 }}>
+              {children}
+            </main>
+          </div>
+        </div>
       </body>
     </html>
   );
