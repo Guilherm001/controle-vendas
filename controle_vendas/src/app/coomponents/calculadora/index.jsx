@@ -49,6 +49,7 @@ export default function Card(props) {
                     <div>
                         <h4>Resultado: {resultado}</h4>
                     </div>
+                    
                 )}
             </div>
         </div>
