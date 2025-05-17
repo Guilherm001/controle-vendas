@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
-import Card from '..';
-import { calcularPorcentagem, calcularDesconto, calcularLucro } from '../logica';
+import Card from '../../Card/Card';
+import { calcularPorcentagem, calcularDesconto, calcularLucro } from '../../Logica/logica';
 
 export default function App() {
     return (
