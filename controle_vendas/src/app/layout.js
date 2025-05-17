@@ -1,5 +1,7 @@
 
 import "./globals.css";
+import BarraLateral from "./coomponents/barraLateral/BarraLateral";
+import BarraSuperior from "./coomponents/barraSuperior/BarraSuperior";
 
 
 
@@ -13,10 +15,10 @@ export default function RootLayout({ children }) {
     <html lang="pt-br">
       <body>
         <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
-          <h1>barra superior</h1>
+          <BarraSuperior />
           {/* barra superior */}
           <div style={{ display: 'flex', flex: 1 }}>
-            <h1>barra lateral</h1>
+            <BarraLateral />
             {/* barra lateral */}
             <main style={{ flex: 1 }}>
               {children}
