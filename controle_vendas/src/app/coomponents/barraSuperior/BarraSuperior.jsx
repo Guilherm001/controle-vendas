@@ -1,9 +1,10 @@
-
+import Style from './style.module.css';
+import Link from 'next/link';
 
 
 export default function BarraSuperior() {
     return (
-        <div style={{ width: '100%', backgroundColor: '#f0f0f0', padding: '10px' }}>
+        <div className={Style.container}>
             <h2>Barra Superior</h2>
             <ul>
                 <li><a href="#">Link 1</a></li>

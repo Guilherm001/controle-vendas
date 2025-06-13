@@ -1,0 +1,13 @@
+.listaLinks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+.container{
+    width: 200px;
+    background-color: #8498be;
+    padding: 10px;
+
+}
