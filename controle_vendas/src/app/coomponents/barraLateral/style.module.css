@@ -7,7 +7,22 @@
 }
 .container{
     width: 200px;
-    background-color: #8498be;
+    background-color: #315ba0;
     padding: 10px;
 
+}
+.container h2 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+.container a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    margin: 5px 0;
+    width: 100%;
+    text-align: center;
+    border-radius: 4px;
 }
