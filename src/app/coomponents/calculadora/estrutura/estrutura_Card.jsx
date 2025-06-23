@@ -45,7 +45,13 @@ export default function App() {
                 label_03="Calcular"
                 placeholder_01="Digite o valor de venda"
                 placeholder_02="Digite o valor de custo"
-                calcularFuncao={calcularLucroPercentual}
+                result_resposta1="Lucro Percentual: "
+                result_resposta2="Lucro Percentual: "
+                result_resposta3="Lucro Percentual: "
+                calcularFuncao={calcularLucroPercentual}                
+                calcularFuncao2={calcularDesconto}
+                calcularFuncao3={calcularPorcentagem}
+
             
             />
             
