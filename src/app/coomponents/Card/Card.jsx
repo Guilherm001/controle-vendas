@@ -10,18 +10,22 @@ export default function Card(props) {
     const [resultado3, setResultado3] = useState(null);
 
     const handleSubmit = (e) => {
-        e.preventDefault();
-        try {
-            const valorFinal1 = props.calcularFuncao(parseFloat(valor1), parseFloat(valor2));
-            setResultado1(valorFinal1.toFixed(2));
-            const valorFinal2 = props.calcularFuncao2(parseFloat(valor1), parseFloat(valor2));
-            setResultado2(valorFinal2.toFixed(2));
+    e.preventDefault();
+    try {
+        const valorFinal1 = props.calcularFuncao(parseFloat(valor1), parseFloat(valor2));
+        setResultado1(valorFinal1.toFixed(2));
+        const valorFinal2 = props.calcularFuncao2(parseFloat(valor1), parseFloat(valor2));
+        setResultado2(valorFinal2.toFixed(2));
+        if (typeof props.calcularFuncao3 === 'function') {
             const valorFinal3 = props.calcularFuncao3(parseFloat(valor1), parseFloat(valor2));
             setResultado3(valorFinal3.toFixed(2));
-        } catch (error) {
-            alert(error.message);
+        } else {
+            setResultado3(null);
         }
-    };
+    } catch (error) {
+        alert(error.message);
+    }
+};
 
     return (
         <div className={styles.card}>
@@ -49,21 +53,21 @@ export default function Card(props) {
                         placeholder={props.placeholder_02}
                     />
 
-                    <button type="submit">{props.label_03}</button>
+                    <button type="submit" style={{backgroundColor: props.corBotao, color: "#fff" }}>{props.label_03}</button>
                 </form>
                 {(resultado1 !== null || resultado2 || resultado3 !== null) && (
                     <div className={styles.resultContainer}>
                         <div className={styles.result1}>
                             <p>{props.result_resposta1}</p>
-                            <h2>{resultado1}%</h2>
+                            <h2 style={{color: props.corResultado1}}>{resultado1}</h2>
                         </div>
                         <div className={styles.result1}>
                             <p>{props.result_resposta2}</p>
-                            <h2>{resultado2}</h2>
+                            <h2 style={{color: props.corResultado2}}>{resultado2}</h2>
                         </div>
                         <div className={styles.result1}>
                             <p>{props.result_resposta3}</p>
-                            <h2>{resultado3}</h2>
+                            <h2 style={{color: props.corResultado2}}>{resultado3}</h2>
                         </div>
                     </div>
                 )}

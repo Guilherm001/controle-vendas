@@ -15,7 +15,15 @@ export default function App() {
                 label_03="Calcular"
                 placeholder_01="Digite o valor do produto"
                 placeholder_02="Digite a porcentagem"
+                result_resposta1="Valor Final: "
+                result_resposta2="Valor Final: "    
+                result_resposta3=" "
                 calcularFuncao={calcularPorcentagem}
+                calcularFuncao2={calcularDesconto}
+                corBotao="#fba02d" // Cor do botão
+                corResultado1="#008000" // Cor do resultado
+                corResultado2="#004080"
+                corResultado3="#f0f"
             />
             <Card
                 titulo="Calculadora de Desconto"
@@ -25,17 +33,35 @@ export default function App() {
                 label_03="Calcular"
                 placeholder_01="Digite o valor do produto"
                 placeholder_02="Digite o desconto"
-                calcularFuncao={calcularDesconto}
+                result_resposta1="valor com desconto: "
+                result_resposta2="valor do desconto: "    
+                result_resposta3="valor a cobrar: "
+                calcularFuncao={calcularPorcentagem}
+                calcularFuncao2={calcularDesconto}
+                calcularFuncao3={calcularDesconto}
+                corBotao="#d32f2f" // Cor do botão
+                corResultado1="#008000" // Cor do resultado
+                corResultado2="#388e3c"
+                corResultado3="#f0f"
             />
             <Card
-                titulo="Calculadora de Lucro"
+                titulo="Margem de Lucro"
                 descricao="Calcule o lucro com base no valor de venda e custo."
                 label_01="Valor de Venda"
                 label_02="Valor de Custo"
                 label_03="Calcular"
                 placeholder_01="Digite o valor de venda"
                 placeholder_02="Digite o valor de custo"
-                calcularFuncao={calcularLucro}
+                result_resposta1="Lucro Percentual: "
+                result_resposta2="Lucro $: "
+                result_resposta3=" "
+                calcularFuncao={calcularLucroPercentual}                
+                calcularFuncao2={calcularLucro}
+                calcularFuncao3={''}
+                corBotao="#388e3c" // Cor do botão
+                corResultado1="#008000" // Cor do resultado
+                corResultado2="#004080"
+
             />
             <Card 
                 titulo="Calculadora de Lucro Percentual"
@@ -51,6 +77,11 @@ export default function App() {
                 calcularFuncao={calcularLucroPercentual}                
                 calcularFuncao2={calcularDesconto}
                 calcularFuncao3={calcularPorcentagem}
+                corBotao="#459" // Cor do botão
+                corResultado1="#008000" // Cor do resultado
+                corResultado2="#004080"
+                corResultado3="#f0f"
+                
 
             
             />
