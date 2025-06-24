@@ -14,9 +14,14 @@ export default function Card(props) {
     try {
         const valorFinal1 = props.calcularFuncao(parseFloat(valor1), parseFloat(valor2));
         setResultado1(valorFinal1.toFixed(2));
-        const valorFinal2 = props.calcularFuncao2(parseFloat(valor1), parseFloat(valor2));
-        setResultado2(valorFinal2.toFixed(2));
-        if (typeof props.calcularFuncao3 === 'function') {
+        if (typeof props.calcularFuncao2 === 'function') {
+    const valorFinal2 = props.calcularFuncao2(parseFloat(valor1), parseFloat(valor2));
+    setResultado2(valorFinal2.toFixed(2));
+} else {
+    setResultado2(null);
+}
+        
+        if  (typeof props.calcularFuncao3 === 'function') {
             const valorFinal3 = props.calcularFuncao3(parseFloat(valor1), parseFloat(valor2));
             setResultado3(valorFinal3.toFixed(2));
         } else {
@@ -67,7 +72,7 @@ export default function Card(props) {
                         </div>
                         <div className={styles.result1}>
                             <p>{props.result_resposta3}</p>
-                            <h2 style={{color: props.corResultado2}}>{resultado3}</h2>
+                            <h2 style={{color: props.corResultado3}}>{resultado3}</h2>
                         </div>
                     </div>
                 )}

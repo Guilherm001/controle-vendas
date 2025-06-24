@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import Card from '../../Card/Card';
-import { calcularPorcentagem, calcularDesconto, calcularLucro, calcularLucroPercentual } from '../../Logica/logica';
+import { calcularPorcentagem, calcularDesconto, calcularLucro, calcularLucroPercentual, tes } from '../../Logica/logica';
 import Style from './Styles.module.css';
 
 export default function App() {
@@ -10,16 +10,15 @@ export default function App() {
             <Card 
                 titulo="Calculadora de Porcentagem"
                 descricao="Calcule o valor final com base em uma porcentagem."
-                label_01="Valor do Produto"
-                label_02="Porcentagem"
+                label_01="Valor de custo do produto"
+                label_02="Porcentagem a ganhar"
                 label_03="Calcular"
                 placeholder_01="Digite o valor do produto"
                 placeholder_02="Digite a porcentagem"
                 result_resposta1="Valor Final: "
-                result_resposta2="Valor Final: "    
+                result_resposta2=" "    
                 result_resposta3=" "
                 calcularFuncao={calcularPorcentagem}
-                calcularFuncao2={calcularDesconto}
                 corBotao="#fba02d" // Cor do botão
                 corResultado1="#008000" // Cor do resultado
                 corResultado2="#004080"
@@ -36,13 +35,13 @@ export default function App() {
                 result_resposta1="valor com desconto: "
                 result_resposta2="valor do desconto: "    
                 result_resposta3="valor a cobrar: "
-                calcularFuncao={calcularPorcentagem}
-                calcularFuncao2={calcularDesconto}
-                calcularFuncao3={calcularDesconto}
+                calcularFuncao={calcularDesconto}
+                calcularFuncao2={tes}
+                calcularFuncao3={tes}
                 corBotao="#d32f2f" // Cor do botão
                 corResultado1="#008000" // Cor do resultado
                 corResultado2="#388e3c"
-                corResultado3="#f0f"
+                corResultado3="#ff0f85"
             />
             <Card
                 titulo="Margem de Lucro"

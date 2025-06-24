@@ -28,3 +28,12 @@ export function calcularLucroPercentual(valorVenda, valorCusto) {
   }
   return ((valorVenda - valorCusto) / valorCusto) * 100;
 }
+
+export function tes(valorProduto, desconto) {
+  if (isNaN(valorProduto) || isNaN(desconto)) {
+    throw new Error("Os valores devem ser números.");
+  }
+
+  const valorComDesconto = calcularDesconto(valorProduto, desconto);
+  return valorProduto - valorComDesconto;
+}
