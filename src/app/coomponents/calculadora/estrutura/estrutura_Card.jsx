@@ -33,15 +33,12 @@ export default function App() {
                 placeholder_01="Digite o valor do produto"
                 placeholder_02="Digite o desconto"
                 result_resposta1="valor com desconto: "
-                result_resposta2="valor do desconto: "    
-                result_resposta3="valor a cobrar: "
+                result_resposta2="valor do desconto: "  
                 calcularFuncao={calcularDesconto}
                 calcularFuncao2={tes}
-                calcularFuncao3={tes}
                 corBotao="#d32f2f" // Cor do botão
                 corResultado1="#008000" // Cor do resultado
-                corResultado2="#388e3c"
-                corResultado3="#ff0f85"
+                corResultado2="#ff0f85"
             />
             <Card
                 titulo="Margem de Lucro"
